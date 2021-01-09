@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Shopping</title>
+        <link rel="stylesheet" href="../fontawesome/css/all.css">
+        <meta http-equiv="refresh" content="20">
+        <style>
+            .row{
+                display: grid;
+                grid-template-columns: 3fr 9fr;
+                margin-top: 30px;
+            }
+            header{
+                background-color: tomato;
+                color: white;
+                text-align: center;
+                font-size: 30px;
+            }
+            ul{
+                list-style: none;
+                margin-left: -30px;
+                width: 200px;
+            }
+            li{
+                border: solid black;
+                background-color: orangered;
+                padding: 5px;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            li:hover{
+                background-color: black;
+            }
+            iframe{
+                width: 100%;
+                height: 300px;
+            }
+            a{
+                color: white;
+                 text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <span class="fa fa-shopping-cart"></span>
+            Amazon Shopping
+        </header>
+        <div class="row">
+            <div>
+                <ul>
+                    <li><a href="home.html" target="framebody"><span class="fa fa-home"></span>Home</a></li>
+                    <li><a href="electronics.html" target="framebody"><span class="fa fa-tv"></span>Electronics</a></li>
+                    <li><a href="footwear.html" target="framebody"><span class="fa fa-shoe-prints"></span>Footwear</a></li>
+                    <li><a href="fashion.html" target="framebody"><span class="fa fa-snowflake"></span>Fashion</a></li>
+                    <li><a href="https://www.youtube.com/embed/yECsm5B2_Hg&ab_channel=DarkCode" target="framebody">Best css Profile</a></li>
+                </ul>
+            </div>
+            <div>
+                <iframe src="home.html" name="framebody"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
