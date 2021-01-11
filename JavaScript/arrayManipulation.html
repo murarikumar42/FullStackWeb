@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Manipulation</title>
+        <script >
+            function f1(){
+                var products=["TV","Mobile","Shoe"];
+                document.write(products.toString());
+            }
+            function f2(){
+                var products=["TV","Mobile","Shoe"];
+                document.write(products.join("-->"));
+            }
+            function f3(){
+                var products=["TV","Mobile","Shoe"];
+                document.write(products.slice(1,2));
+            }
+            function f4(){
+                var products=["TV","Mobile","Shoe"];
+                for(var items of products){
+                    document.write(items+"<br>");
+                }
+            }
+            function f5(){
+                var products=["TV","Mobile","Shoe"];
+                for(var items in products){
+                    document.write(items+"<br>");
+                }
+            }
+            function f6(){
+                var products=["TV","Mobile","Shoe"];
+                for(var i=0;i<products.length;i++){
+                    document.write(products[i]+"<br>");
+                }
+            }
+            f6();
+        </script>
+    </head>
+    
+</html>

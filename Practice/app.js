@@ -35,7 +35,7 @@ particlesJS('particles-js',
           "nb_sides": 5
         },
         "image": {
-          "src": "../image/flip_icon.png",
+          "src": "../image/fAssured_logo.png",
           "width": 100,
           "height": 100
         }
@@ -51,7 +51,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 50,
+        "value": 10,
         "random": true,
         "anim": {
           "enable": false,
