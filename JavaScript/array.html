@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            var Categories=["all","electronics","footwear","fashion"];
+            function bodyload(){
+                var lstCategories=document.getElementById("lstCategories");
+                for(var item of Categories)
+                {
+                    var option=document.createElement("option");
+                    option.text=item;
+                    option.value=item;
+                    lstCategories.appendChild(option);
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <fieldset>
+            <legend>Select a Category</legend>
+            <select id="lstCategories">
+
+            </select>
+        </fieldset>
+    </body>
+</html>
