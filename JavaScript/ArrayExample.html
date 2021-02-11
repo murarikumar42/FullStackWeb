@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Array</title>
+        <title>Dynamic DOM</title>
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
         <script>
+            var categories=["Electronics","Footwear","Fashion"];<!--create array -->
+            function bodyload1(){
+               var lstCategories = document.getElementById("lstCategories");
+               for(var item of categories)
+               {
+                    var li = document.createElement("li");
+                    li.innerHTML=item;
+                    lstCategories.appendChild(li);
+                }
+            }
+            function bodyload2(){
+               lstCategories1=document.getElementById("lstCategories1");
+               for(var items of categories){
+                   var option=document.createElement("option");
+                   option.text=items;
+                   option.value=items;
+                   lstCategories1.appendChild(option);
+               }
+            }
 
+            function bodyload3(){
+                var tbody=document.getElementById("tbody");
+                for(var item of categories){
+                    var tr=document.createElement("tr");
+                    var td=document.createElement("td");
+                    td.innerHTML=item;
+                    tr.appendChild(td);
+                    tbody.appendChild(tr);
+                }
+            }
         </script>
     </head>
-    <body class="container-fluid">
-        
+    <body onload="bodyload3()" class="container-fluid">
+        <ol id="lstCategories"><!-- Make an ordered list-->
+
+        </ol>
+        <fieldset>
+            <legend>Select A categories</legend>
+            <select name="" id="lstCategories1"></select>
+        </fieldset>
+
+        <table border="1" width="300">
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
     </body>
+
 </html>
