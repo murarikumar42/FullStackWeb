@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic Insert</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var data=[
+                {Name:"Samsung TV",Price:40000.5},
+                {Name:"Nike Casual",Price:3500.8}
+            ];
+            function loadTable(){
+                var tbody=document.getElementById("tbody");
+                tbody.innerHTML="";
+                for(var item of data){
+                    var tr=document.createElement("tr");
+                    var tdName=document.createElement("td");
+                    var tdPrice=document.createElement("td");
+
+                    tdName.innerHTML=item.Name;
+                    tdPrice.innerHTML=item.Price;
+
+                    tr.appendChild(tdName);
+                    tr.appendChild(tdPrice);
+
+                    tbody.appendChild(tr);
+                }
+            }
+            function addClick(){
+                var txtName=document.getElementById("txtName");
+                var txtPrice=document.getElementById("txtPrice");
+
+                newObject={
+                    Name:txtName.value,
+                    Price:txtPrice.value
+                }
+                data.push(newObject);
+                alert("record added");
+                txtName.value="";
+                txtPrice.value="";
+                loadTable();
+            }
+
+            function bodyload(){
+                loadTable();
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <h2>Register product</h2>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+                <div class="form-group">
+                    <label for="">Price</label>
+                    <input type="text" class="form-control" id="txtPrice">
+                </div>
+                <div class="form-group">
+                    <button onclick="addClick()" class="btn btn-primary btn-block">Add Product</button>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <table class="table table-hover">
+                    <thead >
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </body>
+</html>

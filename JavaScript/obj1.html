@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Creation</title>
+        <script>
+            function f1(){
+                var products=[
+                    {Name:"TV",Price:45000,Category:"Electronics"},
+                    {Name:"Nike",Price:1000,Category:"Footwear"},
+                    {Name:"Shirt",Price:2000,Category:"Fashion"},
+                    {Name:"Mobile",Price:8000,Category:"Electronics"}
+                ];
+                var results=products.filter(function(product){
+                    return product.Price<10000;
+                })
+                for(var item of results){
+                    document.write(item.Name+"-"+item.Price+"<br>");
+                }
+            }
+            f1()
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
